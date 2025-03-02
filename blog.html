@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .poppins {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+
+<body class="h-[1122px] poppins px-[140px] bg-[#f4f7ff]">
+    <section>
+        <header class="pt-6">
+            <div class="bg-white py-[18px] px-6 rounded-2xl flex justify-between items-center">
+                <div class="flex justify-center items-center gap-3">
+                    <img src="assets/logo.png" alt="">
+                    <h2 class=" text-4xl">Dav<span class="font-bold">Board</span></h2>
+                </div>
+                <button id="back-to-desk-btn" class="btn btn-primary font-medium">Back to Desk</button>
+            </div>
+        </header>
+    </section>
+    <section>
+        <h2 class="text-center text-2xl font-bold my-5">Blogs</h2>
+        <div class="bg-white mb-5 rounded-md ">
+            <h3 class="py-4 px-4 border-b-2 border-dashed font-bold text-xl border-[#f0f1f2]">Question-1: What are the
+                different ways to
+                select an element in the DOM?</h3>
+            <p class="py-4 px-4 text-lg ">There are different ways to select an element in the DOM. <br>
+                1. Selecting by ID, where <span class="font-medium">document.getElementById("myElement")</span> is used.
+                <br>
+                2. Multiple elements can be selected using Class, using <span
+                    class="font-medium">document.getElementsByClassName("myClass")</span>. <br>
+                3. For a specific Tag Name, <span class="font-medium">document.getElementsByTagName("p")</span>. <br>
+                4. Using CSS selectors, <span class="font-medium">document.querySelector(".myClass")</span> <br>
+                Through all these methods, it is possible to control various elements of a webpage with JavaScript.
+            </p>
+        </div>
+        <div class="bg-white mb-5 rounded-md ">
+            <h3 class="py-4 px-4 border-b-2 border-dashed font-bold text-xl border-[#f0f1f2]">Question-2: What is the
+                difference between
+                innerHTML, innerText, and textContent ?</h3>
+            <p class="py-4 px-4 text-lg text-justify">The difference between innerHTML, innerText, and textContent is
+                that innerHTML
+                can return and set content, including the full HTML code, so it supports HTML tags.
+                innerText returns only visible text.
+                On the other hand, textContent returns the full text, even retaining hidden text. Simply put, innerHTML
+                allows you to add text along with HTML, innerText only takes the visible text, and textContent displays
+                all the text, but does not process the HTML.</p>
+        </div>
+        <div class="bg-white mb-5 rounded-md ">
+            <h3 class="py-4 px-4 border-b-2 border-dashed font-bold text-xl border-[#f0f1f2]">Question-3: What is event
+                delegation in the
+                DOM?</h3>
+            <p class="py-4 px-4 text-lg text-justify">Event Delegation is a smart technique where instead of adding
+                separate event
+                listeners to each small element, an event is placed on their parent element. When a click or other event
+                occurs on a child element, that event is caught by its parent. This eliminates the need to add multiple
+                event listeners, making the code simpler and performing better. For example, if you have a long list,
+                instead of placing separate events on each li, you can just place one event on the entire ul.</p>
+        </div>
+        <div class="bg-white mb-5 rounded-md ">
+            <h3 class="py-4 px-4 border-b-2 border-dashed font-bold text-xl border-[#f0f1f2]">Question-4: What is event
+                bubbling in the DOM?</h3>
+            <p class="py-4 px-4 text-lg">Event Bubbling is when an event occurs on an element, it propagates to its
+                parent, grandparent and up to the document. For example, when a button is clicked, the button first
+                responds, then its parent div, etc. This is very useful for event delegation.</p>
+        </div>
+        <div class="bg-white mb-5 rounded-md ">
+            <h3 class="py-4 px-4 border-b-2 border-dashed font-bold text-xl border-[#f0f1f2]">Question-5: How do you
+                create, add, and remove elements using JavaScript?</h3>
+            <p class="py-4 px-4 text-lg text-justify">Creating, adding, and deleting new elements with JavaScript is
+                very easy.
+                First, a new element is created with createElement, then it is added to the DOM with appendChild. To
+                delete an element, removeChild or remove directly is used. For example, a new div can be created, added
+                to the body or any other parent, and then easily deleted.</p>
+        </div>
+    </section>
+    <script src="back-index.js"></script>
+</body>
+
+</html>
